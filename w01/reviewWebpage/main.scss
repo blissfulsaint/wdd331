@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+// Colors
+$primary-color: #333;
+$secondary-color: #666;
+$line-color: #d0d0d0;
+$active-color: #DEB887;
+$hover-color: #00ddff;
+
+// Fonts
+$heading-font: 'Lora', serif;
+$paragraph-font: Arial, Helvetica, sans-serif;
+
+// Media Queries
+$break-small: 500px;
+
+
+h1, h2, div {
+    font-family: 'Lora', serif;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: $primary-color;
+}
+
+@mixin listing-container() {
+    border-bottom: 1px solid $line-color;
+    text-transform: uppercase;
+    padding: 40px 5px 5px 0px;
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.post-date {
+    @include listing-container;
+    @media (min-width: $break-small) {
+        & {
+            border-bottom: none;
+            border-right: 1px solid #d0d0d0;
+            padding: 10px;
+            width: 150px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+a, li {
+    text-decoration: none;
+    color: $secondary-color;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+    padding: 10px 0px;
+    a {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: $heading-font;
+    }
+    @media (min-width: $break-small) {
+        & {
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+}
+
+nav {
+    border-top: 1px solid $line-color;
+    border-bottom: 1px solid $line-color;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    @media (min-width: $break-small) {
+        & {
+            margin-bottom: 20px;
+            text-align: right;
+        }
+    }
+}
+
+a:active {
+    color: $active-color;
+}
+
+a:hover {
+    color: $hover-color;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    a {
+        color: $primary-color;
+    }
+}
+
+section {
+    padding: 5px;
+    font-size: .9em;
+    @media (min-width: $break-small) {
+        & {
+            padding: 10px;
+        }
+    }
+}
+
+img {
+    width: 100%;
+    @media (min-width: $break-small) {
+        & {
+            display: block;
+            max-width: 200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: $break-small) {
+    article {
+        display: grid;
+        grid-template-columns: 150px 1fr;
+    }
+
+    h2 {
+        margin: 0px;
+    }
+
+    body div:nth-child(1) {
+        max-width: 650px;
+        margin: 0 auto;
+    }
+}
