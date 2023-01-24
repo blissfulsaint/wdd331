@@ -1,3 +1,11 @@
-p {
-    color: black;
+/* fieldset:not(:first-of-type) {
+    display:none;
+} */
+
+fieldset + fieldset {
+    display:none;
+}
+
+input:required:invalid {
+    background-color: red;
 }
