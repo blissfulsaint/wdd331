@@ -1,0 +1,26 @@
+:root {
+    --max-width: 56em;
+    --min-width: 18em;
+    --preferred-width: 80%;
+    --quoteColor: #b3d4e6;
+}
+
+.quote-box {
+    border-radius: 20px;
+    border: 4px solid yellow;
+    border: 4px solid var(--quoteColor, yellow);
+    width: clamp(var(--min-width), var(--preferred-width), var(--max-width));
+    margin: 0 auto;
+    font-size: clamp(20px, 10vw, 2em);
+    display: flex;
+    padding: 1em;
+    gap: 50px;
+    &_author {
+        text-align: right;
+    }
+    img {
+        width: 100px;
+        height:fit-content;
+    }
+}
+
