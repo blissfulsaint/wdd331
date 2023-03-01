@@ -1,0 +1,44 @@
+.row-grid{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    .card {
+        height: 200px;
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 5px;
+        flex-grow: 1;
+        img {
+            height: 80%;
+            width: 100%;
+        }
+        h2 {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+.col-grid{
+    display: flex;
+    flex-flow: column wrap;
+    max-height: 2000px;
+    padding-bottom: 10px;
+    align-content: flex-start;
+    margin: 0 auto;
+    .card {
+        border: 2px solid black;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 5px;
+        flex-grow: 1;
+        img {
+            height: calc(100% - 45px);
+        }
+        h2 {
+            margin: 5px;
+            text-align: center;
+        }
+    }
+}
