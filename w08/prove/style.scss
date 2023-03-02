@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+}
+
+@mixin horizontalLine() {
+    display: block;
+    content: '';
+    width: 40px;
+    height: 6px;
+    background-color: lightgray;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+@mixin open($adjustmentY, $rotation) {
+    transform: translate(600%, $adjustmentY) rotate($rotation);
+}
+
+div {
+    width: fit-content;
+}
+
+nav li {
+    //color: white;
+    list-style-type: none;
+    margin: 1em;
+    font-size: 2em;
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+#nav-container.open {
+    background-color: black;
+    display: grid;
+    grid-template-columns: [nav] 2fr [escape] 1fr;
+
+    @media (max-width: 540px) {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow: hidden auto;
+        overscroll-behavior: contain;
+
+        visibility: hidden;
+    }
+}
+
+.menu-icon::before, span, .menu-icon::after {
+    @include horizontalLine();
+    transition: .5s;
+}
+
+.open span {
+    @include open(0, 135deg);
+    // transform: translate(600%, 0) rotate(135deg);
+}
+
+.open::before {
+    @include open(14px, 135deg);
+    // transform: translate(600%, 14px) rotate(135deg);
+}
+
+.open::after {
+    @include open(-14px, 45deg);
+    // transform: translate(600%, -14px) rotate(45deg);
+}
+
+#menu-icon {
+    margin-top: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
