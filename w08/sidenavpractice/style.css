@@ -1,0 +1,21 @@
+@media (max-width: 540px) {
+  #sidenav-open {
+    visibility: hidden;
+  }
+  #sidenav-open:target {
+    visibility: visible;
+  }
+}
+#sidenav-container {
+  display: grid;
+  grid: [stack] 1fr/min-content [stack] 1fr;
+  min-height: 100vh;
+}
+
+@media (max-width: 540px) {
+  #sidenav-container > * {
+    grid-area: stack;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
