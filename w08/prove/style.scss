@@ -16,35 +16,60 @@ body {
     transform: translate(600%, $adjustmentY) rotate($rotation);
 }
 
+h1 {
+    margin-top: 100px;
+}
+
 div {
     width: fit-content;
+}
+
+ul {
+    padding: 0;
 }
 
 nav li {
     //color: white;
     list-style-type: none;
-    margin: 1em;
+    margin: 1em 2em;
     font-size: 2em;
     
     a {
         text-decoration: none;
-        color: black;
+        color: white;
+    }
+}
+
+aside#nav-container {
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+    display: grid;
+    width: 0;
+    grid-template-columns: [nav] auto [escape] 1fr;
+    top: 0;
+    transition: .5s;
+    height: 100vh;
+
+    nav {
+        overflow: hidden;
+        width: 0;
+        transition: .5s;
+        background-color: black;
     }
 }
 
 #nav-container.open {
-    background-color: black;
-    display: grid;
-    grid-template-columns: [nav] 2fr [escape] 1fr;
+    width: 100%;
 
-    @media (max-width: 540px) {
-        position: sticky;
-        top: 0;
-        max-height: 100vh;
-        overflow: hidden auto;
-        overscroll-behavior: contain;
+    nav {
+        background-color: black;
+        width: 300px;
+        box-shadow: 5px 5px 20px black;
+    }
 
-        visibility: hidden;
+    a {
+        background-color: transparent;
     }
 }
 
@@ -69,7 +94,9 @@ nav li {
 }
 
 #menu-icon {
-    margin-top: 15px;
+    position: absolute;
+    z-index: 2;
+    top: 15px;
 
     &:hover {
         cursor: pointer;
