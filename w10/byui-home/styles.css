@@ -1030,4 +1030,173 @@ img {
   border: 0;
 }
 
+p, span, h1, h3, a {
+  font-family: "BYUI Open Sans";
+}
+
+a {
+  text-decoration: none;
+  color: #0076b6;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+header {
+  background-color: #0076b6;
+}
+header a {
+  color: #eaeaea;
+  text-decoration: none;
+}
+header .icon-byui-logo {
+  background-color: #020202;
+  padding: 15px;
+  display: block;
+  width: fit-content;
+  font-size: 2.1em;
+}
+header > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+header > div .site-banner__right {
+  margin: auto 10px auto auto;
+}
+header > div .site-banner__right a {
+  text-align: right;
+  font-size: 2.2em;
+}
+header > div form {
+  grid-column: 1/3;
+  text-align: center;
+  background-color: #b4b3b5;
+  padding: 1.2em;
+}
+header > div form input {
+  border-radius: 5px 0 0 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  border: 1px solid #b4b3b5;
+}
+header > div form button {
+  padding: 5px 8px;
+  background-color: #4efe77;
+  border: 1px solid #b4b3b5;
+  border-radius: 0 5px 5px 0;
+}
+header > div form button:hover {
+  cursor: pointer;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  margin: 0px 15px;
+}
+
+.interest-box {
+  border: 1px solid #989898;
+  margin: 40px 0px;
+}
+.interest-box img {
+  display: block;
+}
+.interest-box a {
+  text-decoration: none;
+  color: #0076b6;
+  font-family: "BYUI Open Sans";
+}
+.interest-box span {
+  text-decoration: none;
+  margin: 8px;
+  display: inline-block;
+}
+.interest-box span:nth-of-type(2) {
+  float: right;
+  margin-right: 5px;
+}
+
+#link-list > div {
+  padding: 0;
+  margin-bottom: 40px;
+}
+#link-list h3 {
+  padding: 0.4em 25px;
+  background-color: #0076b6;
+  color: white;
+  font-weight: 400;
+}
+#link-list .resources a {
+  font-size: 0.96em;
+  background-color: rgba(242, 242, 242, 0.4705882353);
+}
+#link-list .resources a span {
+  float: right;
+}
+#link-list .important-dates a {
+  border-left: none;
+  border-right: none;
+  color: black;
+  display: grid;
+  grid-template-columns: 100px 30px 1fr;
+  font-size: 0.8em;
+}
+#link-list .important-dates a .date {
+  font-weight: 700;
+}
+#link-list .important-dates a span {
+  margin: auto 0px;
+}
+#link-list .important-dates a:hover {
+  color: #0076b6;
+}
+#link-list a {
+  display: block;
+  padding: 8px 25px;
+  border: 1px solid #b4b3b5;
+  border-top: none;
+}
+#link-list a:hover {
+  background-color: #e2e2e2;
+}
+
+#newsroom img {
+  display: none;
+}
+#newsroom .news-item {
+  border-top: 1px solid #b4b3b5;
+  margin-bottom: 40px;
+}
+#newsroom .news-item > span {
+  font-weight: 700;
+  font-size: 0.8em;
+  margin: 25px 0px;
+  display: block;
+}
+#newsroom .news-item h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+#newsroom button {
+  background-color: #0076b6;
+  border: none;
+  color: white;
+  font-family: "BYUI Open Sans";
+  font-weight: 600;
+  font-size: 1.05em;
+  padding: 7px 25px;
+  border-radius: 5px;
+  display: block;
+  margin: 0 0 0 auto;
+}
+#newsroom button:hover {
+  cursor: pointer;
+  background-color: #056cb6;
+}
+
 /*# sourceMappingURL=styles.css.map */
