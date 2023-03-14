@@ -62,6 +62,9 @@ header {
   > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    @media screen and (min-width: 1000px){
+      grid-template-columns: 50% 30% 1fr;
+    }
     .site-banner__right {
       margin: auto 10px auto auto;
       a {
@@ -74,6 +77,11 @@ header {
       text-align: center;
       background-color: #b4b3b5;
       padding: 1.2em;
+      @media screen and (min-width: 1000px){
+        grid-column: 2/3;
+        grid-row: 1/2;
+        background-color: transparent;
+      }
       input {
         border-radius: 5px 0 0 5px;
         padding: 5px;
@@ -82,14 +90,22 @@ header {
       }
       button {
         padding: 5px 8px;
-        background-color: #4efe77;
+        background-color: #2fc452;
         border: 1px solid #b4b3b5;
         border-radius: 0 5px 5px 0;
+        color: white;
         &:hover {
           cursor: pointer;
         }
       }
     }
+  }
+}
+
+.white-text {
+  @media screen and (min-width: 1000px){
+    max-width: 900px;
+    margin: 0 auto;
   }
 }
 
@@ -99,11 +115,46 @@ body {
 
 main {
   margin: 0px 15px;
+  @media screen and (min-width: 700px){
+    margin: 0 auto;
+    max-width: 650px;
+  }
+  @media screen and (min-width: 1000px){
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    max-width: 900px;
+    grid-gap: 30px;
+    margin: 50px auto;
+  }
+}
+
+#interest-box-grid {
+  @media screen and (min-width: 1000px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
 }
 
 .interest-box {
   border: 1px solid #989898;
-  margin: 40px 0px;
+  margin: 40px auto;
+
+  &.first {
+    grid-column: 1/4;
+  }
+
+  @media screen and (min-width: 529px){
+    &:not(.first){
+      width: 70%;
+      @media screen and (min-width: 1000px){
+        width: 100%;
+      }
+    }
+    @media screen and (min-width: 1000px){
+      margin: 0;
+    }
+  }
   img {
     display: block;
   }
