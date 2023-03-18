@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..800,0..1,0..1,0..1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:300..800");
+:root {
+  --ratio: 1.5;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+  --font-color: #333;
+  /* set variation axis values */
+  --mono: "MONO" 0;
+  /* Monospace: Sans (natural-width) or Mono (fixed-width) */
+  --casl: "CASL" 0;
+  /* Casual: Linear to Casual */
+  --wght: 300;
+  /* Weight: Light to ExtraBlack; usually set with `font-weight` */
+  --slnt: 0deg;
+  /* Slant: 0 to -15 degrees, auto cursive at -14 */
+  --crsv: "CRSV" 0;
+  /* Cursive: always roman (0), auto substitution (.5), or always cursive (1) */
+}
+
+* {
+  font-weight: var(--wght);
+  font-style: oblique var(--slnt);
+  font-variation-settings: var(--mono), var(--casl), var(--crsv);
+}
+
+html {
+  font-size: 1.3em;
+}
+
+h1,
+h2 {
+  --wght: 600;
+  --casl: "CASL" 0;
+  margin-top: var(--s2);
+  margin-bottom: 0;
+  font-family: sans-serif;
+}
+
+p {
+  line-height: var(--s1);
+  max-width: 66ch;
+  font-family: serif;
+  font-weight: 100;
+}
+
+.info-box {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-gap: 25px;
+}
+.info-box > p {
+  font-family: sans-serif;
+  font-size: 0.8em;
+}
+.info-box .alert {
+  display: block;
+  margin: auto;
+  background-color: rgb(188, 188, 188);
+  padding: 20px 20px;
+  border-radius: 100%;
+}
+
+.code {
+  font-family: Recursive, sans-serif;
+  font-size: 0.9em;
+}
+
+.bold {
+  --wght: 700;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 25px 1fr;
+  grid-gap: 5px;
+}
+section p {
+  margin-top: 15px;
+}
+section span {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=styles.css.map */
